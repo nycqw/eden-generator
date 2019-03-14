@@ -16,7 +16,7 @@ import java.util.Date;
 @Service
 public class IDGeneratorServiceImpl implements IDGeneratorService{
 
-    private String lastTime;
+    private static String lastTime;
     private Object lock = new Object();
     private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
 
