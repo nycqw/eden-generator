@@ -6,9 +6,9 @@ spring:
     name: eden-generator
   redis:
    database: 0
-   host: 106.12.79.78
+   host: 106.14.187.183
    port: 6379
-   password:
+   password: slc13092271475@
    timeout: 10000 # 连接超时时间
    jedis:
      pool:
