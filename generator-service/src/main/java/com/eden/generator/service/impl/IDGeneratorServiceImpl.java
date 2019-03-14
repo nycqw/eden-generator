@@ -24,6 +24,12 @@ public class IDGeneratorServiceImpl implements IDGeneratorService{
     private RedisService redisService;
 
     @Override
+    public Long next(int bizCode) {
+        String serialCode = next(String.valueOf(bizCode), 1);
+        return Long.valueOf(serialCode);
+    }
+
+    @Override
     public String next(String bizCode) {
         return next(bizCode, 1);
     }
@@ -40,6 +46,6 @@ public class IDGeneratorServiceImpl implements IDGeneratorService{
         }
 
         Double serialCode = redisService.hincr("ID_GENERATOR", bizCode, delta);
-        return bizCode + currentTime + (serialCode.intValue() + 100000);
+        return bizCode + currentTime + (serialCode.intValue() + 1000);
     }
 }

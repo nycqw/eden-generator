@@ -30,7 +30,7 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title("swagger构建api文档")
                 .description("简单优雅的restfun风格，http://blog.csdn.net/saytime")
-                .termsOfServiceUrl("http://blog.csdn.net/saytime")
+                .termsOfServiceUrl("http://localhost:8092/swagger-ui.html")
                 .version("1.0")
                 .build();
     }

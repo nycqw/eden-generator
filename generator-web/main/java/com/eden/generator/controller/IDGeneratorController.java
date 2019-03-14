@@ -26,4 +26,12 @@ public class IDGeneratorController {
         log.info("serial code -> {}", serialCode);
         return serialCode;
     }
+
+    @GetMapping("/id/next/number")
+    @ResponseBody
+    public Long next(@RequestParam int bizCode) {
+        Long serialCode = idGeneratorService.next(bizCode);
+        log.info("serial code -> {}", serialCode);
+        return serialCode;
+    }
 }
